@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MORA — Imóveis com sentido. Uma curadoria de espaços para viver o seu próximo capítulo.">
+  <meta name="theme-color" content="#f8f9f6">
+  <title>MORA — Imóveis com sentido</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script><script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#imoveis">Ir para os imóveis</a>
+  <header class="hero" id="inicio">
+    <img class="hero-photo" src="assets/casa-horizonte.webp" alt="Casa contemporânea de pedra e madeira, rodeada por um jardim" fetchpriority="high" width="1536" height="1024">
+    <div class="hero-shade"></div>
+    <nav class="nav wrap" aria-label="Menu principal">
+      <a href="#inicio" class="brand" aria-label="Mora início"><svg viewBox="0 0 32 36" aria-hidden="true"><path d="M3 32V10L16 3l13 7v22H19V18h-6v14Z"/></svg>mora</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu <span>☰</span></button>
+      <div class="nav-links" id="nav-links"><a href="#imoveis">Encontrar um imóvel</a><a href="#essencia">Nossa essência</a><a href="#caminho">Como funciona</a><button class="nav-contact" data-contact>Vamos conversar <span>↗</span></button></div>
+    </nav>
+    <div class="hero-copy"><p class="eyebrow">ESPAÇOS PARA NOVAS HISTÓRIAS</p><h1>O próximo capítulo<br>começa em casa.</h1><p>Mais que um endereço. Um lugar que combina<br class="desktop"> com a vida que você quer viver.</p><a class="button black" href="#imoveis">Encontre seu lugar <span>↗</span></a></div>
+    <div class="hero-bottom wrap"><span>IMÓVEIS COM SENTIDO.</span><a href="#essencia">Um novo olhar sobre morar <span>↓</span></a></div>
+  </header>
+  <main>
+    <section class="intro wrap section" id="essencia">
+      <div><p class="eyebrow">PRAZER, SOMOS A MORA.</p><p class="small-note">Alguns lugares a gente visita.<br>Outros, a gente sente.</p></div>
+      <div><h2>A vida muda.<br>O seu lugar também pode.</h2><p class="intro-text">Uma janela por onde entra a manhã. Uma mesa com espaço para mais alguém. Um jardim para desacelerar. A gente acredita que encontrar um imóvel começa por entender o que faz você se sentir em casa.</p>
+        <div class="intro-features"><div><span class="icon">⌂</span><h3>Seu jeito de viver</h3><p>A busca começa pela sua rotina, pelos seus planos e pelo que importa.</p></div><div><span class="icon">↗</span><h3>Escolhas com intenção</h3><p>Arquitetura, luz e localização. Cada detalhe faz parte da escolha.</p></div></div>
+        <a class="text-link" href="#imoveis">Conheça a nossa seleção <span>↗</span></a>
+      </div>
+    </section>
+    <section class="editorial wrap" aria-label="Inspiração para morar"><figure class="editorial-main"><img src="assets/casa-jardim.webp" alt="Fachada branca de uma casa com janelas amplas e paisagismo" loading="lazy" width="1536" height="1024"><figcaption>01 / Arquitetura que acolhe.</figcaption></figure><figure><img src="assets/interior.webp" alt="Sala de estar iluminada com sofá de linho e vista para o jardim" loading="lazy" width="1536" height="1024"><figcaption>02 / Espaço para ser você.</figcaption></figure></section>
+    <section class="listings section" id="imoveis"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">DESCUBRA SEU PRÓXIMO ENDEREÇO</p><h2>Lugares que fazem<br>você querer ficar.</h2></div><p>Uma seleção para imaginar a vida acontecendo.<br><span class="demo-note">Imóveis, valores e imagens ilustrativos.</span></p></div>
+      <form class="search" id="search-form"><label>O que você procura?<select name="purpose"><option value="all">Comprar ou alugar</option><option value="sale">Comprar</option><option value="rent">Alugar</option></select></label><label>Tipo de imóvel<select name="type"><option value="all">Todos os tipos</option><option value="house">Casa</option><option value="apartment">Apartamento</option></select></label><label>Seu próximo lugar<input type="search" name="query" placeholder="Cidade, bairro ou nome"></label><button class="button black" type="submit">Explorar imóveis <span>↗</span></button></form>
+      <div class="listing-toolbar"><p id="result-count" aria-live="polite">3 lugares para descobrir</p><button class="text-link" id="favorites-filter" aria-pressed="false">♡ Meus favoritos</button></div>
+      <div class="property-grid" id="property-grid"></div><p class="empty" id="empty" hidden>Nenhum imóvel por aqui ainda. Experimente outros filtros ou desative os favoritos.</p>
+    </div></section>
+    <section class="why wrap section"><p class="eyebrow">POR QUE ESCOLHER A MORA?</p><h2>Você traz os planos.<br>A gente ajuda a encontrar o lugar.</h2><div class="why-grid"><div><span class="icon">✧</span><h3>Curadoria com olhar humano</h3><p>O espaço precisa fazer sentido para quem vai viver nele. É por aí que começamos.</p></div><div><span class="icon">↔</span><h3>Conversa sem complicação</h3><p>Suas dúvidas merecem respostas claras. E suas escolhas, tempo para acontecer.</p></div><div><span class="icon">⌂</span><h3>Do primeiro olhar à chave</h3><p>Uma jornada pensada para aproximar você do seu próximo endereço.</p></div></div></section>
+    <section class="story wrap" id="caminho"><div class="story-copy"><p class="eyebrow">CADA MUDANÇA TEM UM COMEÇO</p><h2>A casa é o cenário.<br>A história é sua.</h2><p>Talvez seja o primeiro apartamento. Mais espaço para a família. Ou a vontade de abrir a janela e enxergar novos horizontes.</p><p>Conte o que está mudando. Vamos descobrir onde o seu próximo capítulo pode acontecer.</p><ol class="steps"><li><span>01</span><div><h3>Conte o que você imagina</h3><p>Rotina, região, espaço e investimento.</p></div></li><li><span>02</span><div><h3>Conheça as possibilidades</h3><p>Explore, compare e escolha o que quer visitar.</p></div></li><li><span>03</span><div><h3>Sinta o lugar de perto</h3><p>Uma visita pode transformar uma ideia em plano.</p></div></li></ol><button class="button black" data-contact>Vamos encontrar seu lugar <span>↗</span></button></div><img src="assets/casa-horizonte.webp" alt="Jardim e fachada de uma casa contemporânea cercada por natureza" loading="lazy" width="1536" height="1024"></section>
+    <section class="cta wrap section"><p class="eyebrow">O PRIMEIRO PASSO PODE SER UMA CONVERSA.</p><h2>Onde você quer<br>viver o que vem agora?</h2><button class="button black" data-contact>Conte seus planos <span>↗</span></button></section>
+  </main>
+  <footer class="wrap"><div class="footer-top"><a class="brand" href="#inicio">mora</a><p>Imóveis com sentido.<br>Histórias com lugar para acontecer.</p><a href="#imoveis">Explore os imóveis ↗</a></div><div class="footer-bottom"><span>© <span id="year"></span> MORA · Conceito de marca e site demonstrativo.</span><span>Nome sujeito à verificação de disponibilidade.</span></div></footer>
+  <dialog id="property-dialog" aria-labelledby="property-title"><button class="close" data-close aria-label="Fechar detalhes">×</button><img id="detail-image" alt="" width="1536" height="1024"><div class="dialog-body"><p class="eyebrow" id="detail-location"></p><h2 id="property-title"></h2><p id="detail-description"></p><div class="detail-specs" id="detail-specs"></div><strong class="detail-price" id="detail-price"></strong><p class="demo-note">Anúncio demonstrativo. Este imóvel não está disponível para negociação.</p><button class="button black" id="request-property">Tenho interesse em algo assim ↗</button></div></dialog>
+  <dialog id="contact-dialog" aria-labelledby="contact-title"><button class="close" data-close aria-label="Fechar contato">×</button><div class="dialog-body"><p class="eyebrow">VAMOS CONVERSAR</p><h2 id="contact-title">Todo novo capítulo<br>começa com um olá.</h2><form id="contact-form"><label>Seu nome<input name="name" autocomplete="name" required maxlength="100" placeholder="Como podemos chamar você?"></label><label>O que você procura?<textarea name="message" required rows="4" maxlength="2000" placeholder="Conte a região, o tipo de imóvel e seus planos."></textarea></label><p id="contact-note" class="demo-note"></p><button class="button black" type="submit" id="contact-submit">Preparar mensagem ↗</button><p id="contact-status" role="status"></p><textarea id="prepared-message" aria-label="Mensagem preparada para copiar" rows="5" readonly hidden></textarea></form></div></dialog>
+</body>
+</html>
