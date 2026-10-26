@@ -1,35 +1,18 @@
-# MORA — Imóveis com sentido
+# MORA — Case para proprietários de imobiliárias
 
-Site estático de imobiliária inspirado na composição visual da referência enviada: fotografia arquitetônica ampla, azul-céu, branco, preto e verde suave. O texto, o nome e as imagens foram criados para este conceito. A fonte usa Arial/Helvetica e alternativas do sistema, aproximando a referência, cuja fonte exata não pode ser identificada pela imagem.
+Abra `index.html` para a apresentação comercial ou `demo.html` para experimentar a imobiliária fictícia. `PREVIA.html` preserva a prévia original. A versão comercial atual é `index.html`.
 
-## Abrir
+## Proposta
+Case conceitual por Caroline: auditoria, branding ou rebranding, posicionamento, comunicação e site/sistema personalizado para o setor imobiliário. Sem resultados comerciais ou clientes inventados.
 
-Abra `index.html` no navegador. Não precisa instalar dependências. Para desenvolvimento, pode usar `python3 -m http.server 8080` nesta pasta e abrir `http://localhost:8080`.
+## Implementado
+Página comercial com contato; demonstração com filtros, favoritos locais e detalhes de imóveis; animações de entrada, fotos e interações. Respeita a preferência do sistema por reduzir movimento. Funciona sem instalação ou dependências externas.
 
-## Publicar no GitHub Pages
+## Contato
+Configure o número real em `config.js`, com país e DDD, somente dígitos. Sem número, o formulário prepara e copia a mensagem, informa o modo demonstrativo e não envia dados.
 
-1. Crie um repositório e envie **todo o conteúdo desta pasta**, incluindo `assets` e `.github`.
-2. Em **Settings → Pages → Build and deployment**, selecione **GitHub Actions**.
-3. O fluxo incluso publica o site a cada envio para `main`. Também pode ser executado manualmente em Actions.
+## Publicação
+Envie os arquivos HTML, CSS, JavaScript e a pasta `assets` juntos, mantendo os caminhos. A página inicial é `index.html`. Se usar uma pasta de saída de publicação, inclua também `demo.html`, `case.js`, `motion.js` e `motion.css`.
 
-Outra opção: em Pages, escolha **Deploy from a branch**, branch `main`, pasta `/ (root)`. Todos os caminhos são relativos e funcionam em subpastas do GitHub Pages.
-
-## Personalizar
-
-- `index.html`: textos, marca e seções.
-- `styles.css`: cores, fontes, responsividade e espaçamentos.
-- `script.js`: lista de imóveis, valores, características e comportamento.
-- `config.js`: número real do WhatsApp com país e DDD, somente dígitos. Sem número configurado, o formulário prepara/copia uma mensagem local e explica que nada é enviado.
-- `assets/`: fotografias WebP otimizadas. As versões PNG de origem estão em `originais/`.
-
-## O que funciona
-
-Filtros por compra/aluguel, tipo e texto (ignora acentos); favoritos salvos no navegador; detalhes em janela; menu mobile; preparação de mensagem e integração opcional com WhatsApp. Não há banco de dados, login, captação remota ou envio automático. Os dados digitados no formulário não são persistidos pelo site; somente os IDs dos favoritos são guardados no navegador.
-
-## Antes de usar comercialmente
-
-Este é um site demonstrativo: nome de marca proposto, anúncios, endereços, características e preços ilustrativos; fotografias geradas por IA e sem correspondência comprovada com imóveis reais. Substitua por fotos e anúncios autorizados, informações reais da imobiliária e identificação profissional aplicável. Verifique disponibilidade do nome e domínio. Sem avaliações ou números de desempenho inventados.
-
-## Arquivos
-
-`index.html`, `styles.css`, `script.js`, `config.js`, `assets/`, `originais/`, `PROMPTS.md` e `.github/workflows/pages.yml`.
+## Limites
+MORA é uma marca fictícia proposta. Imóveis e valores são ilustrativos, com imagens geradas por IA. Recursos de gestão, distribuição de contatos, agenda e integrações são possibilidades de escopo, não funcionalidades implementadas. Não há banco de dados ou captação remota neste case.

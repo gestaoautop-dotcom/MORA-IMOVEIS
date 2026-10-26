@@ -1,0 +1,19 @@
+/* Progressive enhancement: content remains visible without scripts. */
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:45px}.case-feature{padding:32px 24px;border-block:1px solid #dfe1da;transition:background .3s,transform .3s}.case-feature:hover{background:#f1f2e9;transform:translateY(-4px)}.case-number{font-size:10px;letter-spacing:.12em;color:#858a7c}.case-feature h3{font-size:25px;line-height:1.2;margin:28px 0 17px;max-width:240px}.case-feature p{font-size:12px;color:#747b6d;line-height:1.8;min-height:90px}.case-feature .text-link{margin-top:25px}.case-footnote{margin-top:28px}.case-cta-text{font-size:13px;color:#747b6d;margin:20px 0}.case-secondary{display:block;margin-top:24px;font-size:11px}.demo-banner{background:#e1e3be;padding:10px 20px;text-align:center;font-size:11px;color:#171c19}.demo-banner a{margin-left:15px;text-decoration:underline;text-underline-offset:3px}.nav-contact{white-space:nowrap}
+@media(max-width:700px){.case-grid{grid-template-columns:1fr;gap:15px}.case-feature{padding:25px 10px}.case-feature p{min-height:0}.case-feature h3{max-width:none;margin-top:18px}.demo-banner{font-size:10px}.demo-banner a{display:block;margin-left:0;margin-top:4px}}
+.reading-progress{position:fixed;inset:0 0 auto;height:3px;background:#dfe1bb;transform:scaleX(0);transform-origin:left;z-index:20;pointer-events:none}
+.hero{overflow:clip}.hero-photo{transform:translateY(var(--hero-shift,0px)) scale(1.045)}
+.hero-bottom a span,.button span,.text-link span,.nav-contact span{display:inline-block}
+.button span,.text-link span,.nav-contact span{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.button:hover span,.button:focus-visible span,.text-link:hover span,.text-link:focus-visible span,.nav-contact:hover span{transform:translate(3px,-3px)}
+.nav-links>a{position:relative}.nav-links>a::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.nav-links>a:hover::after,.nav-links>a:focus-visible::after{transform:scaleX(1)}
+.property{transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s}.favorite{transition:transform .25s,background .25s}.favorite:active{transform:scale(.88)}.favorite[aria-pressed=true]{animation:mora-heart .4s ease-out}
+.editorial figure{overflow:hidden;border-radius:9px 9px 0 0}.editorial img{transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+@media(hover:hover) and (pointer:fine){.property:hover{transform:translateY(-7px);box-shadow:0 18px 35px #17231912}.editorial figure:hover img{transform:scale(1.025)}}
+dialog[open]{animation:mora-dialog .32s cubic-bezier(.2,.7,.2,1)}dialog[open]::backdrop{animation:mora-backdrop .3s ease-out}
+@keyframes mora-heart{0%,100%{transform:scale(1)}50%{transform:scale(1.22)}}
+@keyframes mora-dialog{from{opacity:0;transform:translateY(18px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes mora-backdrop{from{opacity:0}to{opacity:1}}
+@media(max-width:700px){.hero-photo{transform:scale(1.025)}.nav-links.open{animation:mora-dialog .25s ease-out}}
+@media(prefers-reduced-motion:reduce){.hero-photo{transform:none}.property,.editorial img,.button span,.text-link span,.nav-contact span,.favorite,.nav-links>a::after{transition:none!important;animation:none!important}.property:hover,.editorial figure:hover img,.button:hover span,.text-link:hover span,.nav-contact:hover span{transform:none}dialog[open],dialog[open]::backdrop,.nav-links.open{animation:none!important}}
