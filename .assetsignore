@@ -1,0 +1,12 @@
+# Publish only the files used by the MORA website.
+*
+!index.html
+!demo.html
+!styles.css
+!motion.css
+!config.js
+!case.js
+!script.js
+!languages.js
+!assets/
+!assets/**
