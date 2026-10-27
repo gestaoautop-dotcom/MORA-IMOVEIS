@@ -40,11 +40,11 @@ const phone=String(window.MORA_CONFIG?.whatsapp||'').replace(/\D/g,'');
 const configured=/^\d{10,15}$/.test(phone);
 $('#contact-note').textContent=configured?'Ao continuar, a mensagem será aberta no WhatsApp. Nenhum dado é enviado por este site.':'Demonstração: o atendimento ainda não está conectado. Você pode preparar e copiar sua mensagem. Nenhum dado será enviado.';
 $('#contact-submit').textContent=configured?'Continuar no WhatsApp ↗':'Preparar mensagem ↗';
-function contact(property){if($('#property-dialog').open)$('#property-dialog').close();$('#contact-form').reset();$('#contact-status').textContent='';$('#prepared-message').hidden=true;if(property)$('#contact-form textarea[name="message"]').value=`Gostei da proposta de ${property.name} e procuro um imóvel com características semelhantes. Podemos conversar?`;openDialog($('#contact-dialog'))}
+function contact(property){if($('#property-dialog').open)$('#property-dialog').close();$('#contact-form').reset();$('#contact-status').textContent='';$('#prepared-message').hidden=true;if(property)$('#contact-form textarea[name="message"]').value=(window.MORA_I18N?.getLanguage()==='en'?`I liked the concept of ${property.name} and am looking for a similar property. Could we talk?`:`Gostei da proposta de ${property.name} e procuro um imóvel com características semelhantes. Podemos conversar?`);openDialog($('#contact-dialog'))}
 document.querySelectorAll('[data-contact]').forEach(b=>b.addEventListener('click',()=>contact()));
 $('#request-property').addEventListener('click',()=>contact(selectedProperty));
 $('#contact-form').addEventListener('submit',async event=>{
- event.preventDefault();const data=new FormData(event.target);const message=`Olá, sou ${String(data.get('name')).trim()}. Vim pelo site da MORA.\n\n${String(data.get('message')).trim()}`;
+ event.preventDefault();const data=new FormData(event.target);const intro=window.MORA_I18N?.getLanguage()==='en'?`Hi, I am ${String(data.get('name')).trim()}. I found you on the MORA website.`:`Olá, sou ${String(data.get('name')).trim()}. Vim pelo site da MORA.`;const message=`${intro}\n\n${String(data.get('message')).trim()}`;
  if(configured){window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`,'_blank','noopener,noreferrer');$('#contact-status').textContent='Mensagem preparada. Continue a conversa na janela do WhatsApp.';return}
  $('#prepared-message').value=message;$('#prepared-message').hidden=false;
  try{await navigator.clipboard.writeText(message);$('#contact-status').textContent='Mensagem copiada! Nenhuma informação foi enviada.'}catch{$('#prepared-message').focus();$('#prepared-message').select();$('#contact-status').textContent='Mensagem pronta. Selecione e copie o texto abaixo.'}

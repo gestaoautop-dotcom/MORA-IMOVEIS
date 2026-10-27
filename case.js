@@ -16,7 +16,8 @@
  dialog.addEventListener('click',event=>{const r=dialog.getBoundingClientRect();if(event.target===dialog&&(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom))dialog.close();});
  form.addEventListener('submit',async event=>{
    event.preventDefault();const data=new FormData(form);
-   const text=`Olá, sou ${String(data.get('name')).trim()}. Conheci o case MORA e quero conversar sobre um projeto para minha imobiliária.\n\n${String(data.get('message')).trim()}`;
+   const intro=window.MORA_I18N?.getLanguage() === 'en' ? `Hi, I am ${String(data.get('name')).trim()}. I explored the MORA case and would like to discuss a project for my real estate business.` : `Olá, sou ${String(data.get('name')).trim()}. Conheci o case MORA e quero conversar sobre um projeto para minha imobiliária.`;
+   const text=`${intro}\n\n${String(data.get('message')).trim()}`;
    if(configured){window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`,'_blank','noopener,noreferrer');document.querySelector('#contact-status').textContent='Continue sua mensagem no WhatsApp.';return;}
    const output=document.querySelector('#prepared-message');output.value=text;output.hidden=false;
    try{await navigator.clipboard.writeText(text);document.querySelector('#contact-status').textContent='Mensagem copiada. Nenhum dado foi enviado.';}catch{output.focus();output.select();document.querySelector('#contact-status').textContent='Mensagem pronta para copiar abaixo.';}
