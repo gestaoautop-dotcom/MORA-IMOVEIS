@@ -13,7 +13,7 @@
   <script src="motion.js" defer></script>
 </head>
 <body>
-  <div class="demo-banner">You are exploring a fictional real estate business. <a href="#about-project">Independent project by Caroline Wilhelm ↗</a></div>
+  <div class="demo-banner">You are exploring a fictional real estate business. <a href="/about.html">Independent project by Caroline Wilhelm ↗</a></div>
   <a class="skip" href="#imoveis">Skip to the properties</a>
   <header class="hero" id="inicio">
     <img class="hero-photo" src="assets/casa-horizonte.webp" alt="A contemporary stone and timber house surrounded by a garden" fetchpriority="high" width="1536" height="1024">
@@ -21,7 +21,7 @@
     <nav class="nav wrap" aria-label="Main navigation">
       <a href="#inicio" class="brand" aria-label="Mora home"><svg viewBox="0 0 32 36" aria-hidden="true"><path d="M3 32V10L16 3l13 7v22H19V18h-6v14Z"/></svg>mora</a>
       <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu <span>☰</span></button>
-      <div class="nav-links" id="nav-links"><a href="#imoveis">Find a property</a><a href="#about-project">About this project ↗</a><a href="#caminho">How it works</a><button class="nav-contact" data-contact>Let's talk <span>↗</span></button></div>
+      <div class="nav-links" id="nav-links"><a href="#imoveis">Find a property</a><a href="/about.html">About this project ↗</a><a href="#caminho">How it works</a><button class="nav-contact" data-contact>Let's talk <span>↗</span></button></div>
       <label class="language-picker"><span aria-hidden="true">◎</span><select id="language-select" aria-label="Language"><option value="en">English</option><option value="pt">Português</option></select></label>
     </nav>
     <div class="hero-copy"><p class="eyebrow">SPACES FOR NEW STORIES</p><h1>Your next chapter<br>starts at home.</h1><p>More than an address. A place that fits<br class="desktop"> the life you want to live.</p><a class="button black" href="#imoveis">Find your place <span>↗</span></a></div>
@@ -44,29 +44,7 @@
     <section class="why wrap section"><p class="eyebrow">WHY CHOOSE MORA?</p><h2>You bring the plans.<br>We help you find the place.</h2><div class="why-grid"><div><span class="icon">✧</span><h3>Curated with a human perspective</h3><p>A space should make sense for the people who will live in it. That is where we start.</p></div><div><span class="icon">↔</span><h3>A straightforward conversation</h3><p>Your questions deserve clear answers. And your decisions deserve time.</p></div><div><span class="icon">⌂</span><h3>From first look to your keys</h3><p>A journey designed to bring you closer to your next address.</p></div></div></section>
     <section class="story wrap" id="caminho"><div class="story-copy"><p class="eyebrow">EVERY CHANGE HAS A BEGINNING</p><h2>The home is the setting.<br>The story is yours.</h2><p>Perhaps it is your first apartment. More space for your family. Or the wish to open a window onto new horizons.</p><p>Tell us what is changing. Let's discover where your next chapter could happen.</p><ol class="steps"><li><span>01</span><div><h3>Tell us what you imagine</h3><p>Your routine, location, space and budget.</p></div></li><li><span>02</span><div><h3>Explore the possibilities</h3><p>Explore, compare and choose what you would like to visit.</p></div></li><li><span>03</span><div><h3>Experience the place in person</h3><p>A visit can turn an idea into a plan.</p></div></li></ol><button class="button black" data-contact>Let's find your place <span>↗</span></button></div><img src="assets/casa-horizonte.webp" alt="The garden and facade of a contemporary home surrounded by nature" loading="lazy" width="1536" height="1024"></section>
     <section class="cta wrap section"><p class="eyebrow">THE FIRST STEP CAN BE A CONVERSATION.</p><h2>Where do you want<br>your next chapter to unfold?</h2><button class="button black" data-contact>Discuss this project <span>↗</span></button></section>
-<section class="mora-about-editorial" id="about-project" aria-labelledby="mora-about-title">
-  <div class="mora-about-wrap">
-    <div class="mora-about-copy">
-      <p class="mora-about-kicker">INDEPENDENT PROJECT <span aria-hidden="true">—</span> 2026</p>
-      <h2 id="mora-about-title">A more human perspective on real estate.</h2>
-      <p class="mora-about-lead">MORA is an independent real estate concept by Caroline Wilhelm, bringing together thoughtful design, software development and an intuitive digital experience.</p>
-      <div class="mora-about-body">
-        <p>Created as a personal case study, the project explores a calmer way to discover homes: considered typography, clear navigation and a story behind every space.</p>
-        <p>I designed and developed the experience from concept to interface, combining visual direction, usability and front-end engineering.</p>
-        <p class="mora-about-disclaimer">Independent portfolio project. Properties, prices and imagery are illustrative. MORA is not a real estate brokerage.</p>
-      </div>
-      <div class="mora-about-links">
-        <a class="mora-about-primary" href="mailto:cwscaroline@gmail.com?subject=MORA%20Project%20Inquiry">Email Caroline <span aria-hidden="true">↗</span></a>
-        <a class="mora-about-secondary" href="https://www.linkedin.com/in/caroline-wilhelm-2675bb1ba/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-      </div>
-      <p class="mora-about-credit">CAROLINE WILHELM <span>SOFTWARE DEVELOPER · UX/UI DESIGN</span></p>
-    </div>
-    <figure class="mora-about-photo">
-      <img src="https://carolinew.net/img/caroline-about.webp" alt="Caroline Wilhelm, creator of the independent MORA project" loading="lazy" decoding="async">
-      <figcaption>FIG. 01 <span>CAROLINE WILHELM — INDEPENDENT CREATOR</span></figcaption>
-    </figure>
-  </div>
-</section>
+
   </main>
   <footer class="wrap"><div class="footer-top"><a class="brand" href="#inicio">mora</a><p>Homes with meaning.<br>A place for your story to unfold.</p><a href="#imoveis">Explore the properties ↗</a></div><div class="footer-bottom"><span>© <span id="year"></span> MORA · Independent concept by Caroline Wilhelm.</span><span>Illustrative properties · Not a licensed real estate brokerage.</span></div></footer>
   <dialog id="property-dialog" aria-labelledby="property-title"><button class="close" data-close aria-label="Close property details">×</button><img id="detail-image" alt="" width="1536" height="1024"><div class="dialog-body"><p class="eyebrow" id="detail-location"></p><h2 id="property-title"></h2><p id="detail-description"></p><div class="detail-specs" id="detail-specs"></div><strong class="detail-price" id="detail-price"></strong><p class="demo-note">Demo listing. This property is not available for sale or rent.</p><button class="button black" id="request-property">I am interested in something like this ↗</button></div></dialog>
