@@ -5,13 +5,23 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 
 
-/* Independent project author presentation */
-.mora-author{display:grid;grid-template-columns:minmax(220px,.75fr) 1.25fr;align-items:center;gap:clamp(28px,6vw,90px);padding-block:clamp(70px,9vw,135px);border-top:1px solid #dfe3df}
-.mora-author>img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:3px;background:#e5e9e7}
-.mora-author h2{font-size:clamp(34px,4.2vw,64px);line-height:1.08;letter-spacing:-.055em;margin:12px 0 22px}
-.mora-author p:not(.eyebrow){max-width:590px;color:#52605a;line-height:1.85}
-.mora-author-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.mora-author-links a{display:inline-block;padding:13px 20px;border:1px solid #1d3028;border-radius:2px;text-decoration:none}
-.mora-author-links a:first-child{background:#1d3028;color:white}
-.mora-author-links a:hover{opacity:.75}
-@media(max-width:700px){.mora-author{grid-template-columns:1fr}.mora-author>img{max-width:420px;aspect-ratio:4/4}}
+/* MORA / Editorial creator feature */
+.mora-about-editorial{background:#f6f5f1;color:#191e1a;min-height:100svh;display:flex;align-items:center;padding:clamp(76px,9vw,150px) 0;border-top:1px solid #e5e4df}
+.mora-about-wrap{width:min(1320px,calc(100% - 80px));margin:auto;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(45px,7vw,112px);align-items:center}
+.mora-about-copy{max-width:610px}.mora-about-kicker{font-size:11px!important;letter-spacing:.19em;text-transform:uppercase;color:#69766d;margin:0 0 32px}
+.mora-about-copy h2{font-size:clamp(43px,5vw,76px);line-height:1.06;letter-spacing:-.063em;font-weight:500;margin:0 0 33px;max-width:12ch}
+.mora-about-lead{font-size:clamp(18px,1.4vw,22px);line-height:1.65;color:#27352d;margin:0 0 28px;max-width:43ch}
+.mora-about-body{max-width:540px}.mora-about-body p{font-size:15px;line-height:1.9;color:#566159;margin:0 0 16px}
+.mora-about-body .mora-about-disclaimer{font-size:12px;color:#7d867d;margin-top:30px}
+.mora-about-links{display:flex;gap:12px;flex-wrap:wrap;margin:35px 0 44px}
+.mora-about-links a{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 20px;font-size:13px;border:1px solid #24332a;transition:background .2s,color .2s;text-decoration:none}
+.mora-about-primary{background:#24332a;color:white}.mora-about-secondary{background:transparent;color:#24332a}
+.mora-about-links a:hover{background:#3d5545;color:white}
+.mora-about-credit{border-top:1px solid #d3d7d0;padding-top:19px;font-size:11px;letter-spacing:.12em;color:#2b3730;display:flex;flex-wrap:wrap;gap:8px 24px}
+.mora-about-credit span{color:#768078}
+.mora-about-photo{margin:0;align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+.mora-about-photo img{display:block;width:100%;max-height:760px;aspect-ratio:4/5;object-fit:cover;object-position:center top;background:#e2e6e1}
+.mora-about-photo figcaption{display:flex;justify-content:space-between;gap:20px;font-size:10px;letter-spacing:.13em;color:#70786f;margin-top:14px}
+@media(max-width:850px){.mora-about-wrap{width:min(100% - 44px,680px);grid-template-columns:1fr;gap:45px}.mora-about-copy{max-width:100%}.mora-about-copy h2{max-width:14ch}.mora-about-photo{grid-row:2}.mora-about-photo img{max-height:660px}}
+@media(max-width:520px){.mora-about-editorial{padding:60px 0}.mora-about-wrap{width:calc(100% - 32px)}.mora-about-copy h2{font-size:clamp(38px,10vw,52px)}.mora-about-lead{font-size:17px}.mora-about-body p{font-size:14px}.mora-about-links a{flex:1}.mora-about-photo figcaption{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.mora-about-links a{transition:none}}
