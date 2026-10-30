@@ -163,3 +163,26 @@
  .mora-album-hero .hero-copy{padding-top:90px!important}
  .mora-album-hero .hero-copy h1{font-size:clamp(40px,10vw,55px)!important}
 }
+
+
+/* Composition lock: the image may never show behind the hero copy. */
+.mora-album-hero{background:linear-gradient(100deg,#428ec7 0%,#74afe0 56%,#b6d7f0 100%)!important}
+.mora-album-hero .hero-photo{
+  position:absolute!important;
+  left:auto!important;right:0!important;top:auto!important;bottom:0!important;
+  width:76%!important;height:76%!important;max-width:none!important;
+  object-fit:cover!important;object-position:57% 52%!important;
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,transparent 26%,rgba(0,0,0,.85) 42%,#000 54%),linear-gradient(to bottom,transparent 0%,#000 17%)!important;
+  mask-image:linear-gradient(to right,transparent 0%,transparent 26%,rgba(0,0,0,.85) 42%,#000 54%),linear-gradient(to bottom,transparent 0%,#000 17%)!important;
+  -webkit-mask-composite:source-in!important;mask-composite:intersect!important;
+  transform:none!important;
+}
+.mora-album-hero .hero-copy{width:calc(100% - 108px)!important;max-width:1430px!important;padding-top:clamp(65px,8vh,100px)!important}
+.mora-album-hero .hero-copy h1{max-width:690px!important;font-size:clamp(47px,5.3vw,76px)!important;line-height:1.04!important}
+.mora-album-hero .hero-shade{background:linear-gradient(90deg,rgba(26,93,147,.24),transparent 63%)!important}
+@media(max-width:960px){.mora-album-hero .hero-copy{width:calc(100% - 56px)!important}.mora-album-hero .hero-copy h1{font-size:clamp(43px,6vw,62px)!important;max-width:540px!important}}
+@media(max-width:700px){
+ .mora-album-hero .hero-copy{width:calc(100% - 34px)!important;padding-top:95px!important}
+ .mora-album-hero .hero-copy h1{font-size:clamp(37px,9vw,54px)!important;max-width:12ch!important}
+ .mora-album-hero .hero-photo{width:100%!important;height:49%!important;object-position:61% 48%!important;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 23%)!important;mask-image:linear-gradient(to bottom,transparent 0%,#000 23%)!important}
+}
