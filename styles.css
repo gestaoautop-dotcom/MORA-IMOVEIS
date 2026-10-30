@@ -139,3 +139,27 @@
 }
 @media(max-width:390px){.mora-album-hero .nav-contact{padding:9px;gap:6px}.mora-album-hero .hero-copy{padding-top:107px}.mora-album-hero .hero-copy h1{font-size:40px}}
 @media(prefers-reduced-motion:reduce){.mora-album-hero .hero-photo{transform:none!important}}
+
+/* Approved sky-first architectural composition */
+.mora-album-hero{background:linear-gradient(110deg,#3d8bc8 0%,#78b1df 54%,#c0dff2 100%)!important}
+.mora-album-hero .hero-photo{
+  inset:auto 0 0 0!important;
+  top:auto!important;
+  bottom:0!important;
+  height:67%!important;
+  width:100%!important;
+  object-fit:cover!important;
+  object-position:center 47%!important;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.85) 16%,#000 26%)!important;
+  mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.85) 16%,#000 26%)!important;
+}
+.mora-album-hero .hero-shade{background:linear-gradient(90deg,rgba(22,88,145,.22),transparent 70%)!important}
+.mora-album-hero .hero-copy{padding-top:clamp(72px,9vh,100px)!important}
+.mora-album-hero .hero-copy h1{font-size:clamp(52px,5.6vw,78px)!important;max-width:650px!important}
+.mora-album-hero .hero-bottom{z-index:4!important}
+@media(max-width:700px){
+ .mora-album-hero{background:linear-gradient(145deg,#3b8ac9,#a9cee8)!important}
+ .mora-album-hero .hero-photo{height:58%!important;object-position:63% center!important;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 24%)!important;mask-image:linear-gradient(to bottom,transparent 0%,#000 24%)!important}
+ .mora-album-hero .hero-copy{padding-top:90px!important}
+ .mora-album-hero .hero-copy h1{font-size:clamp(40px,10vw,55px)!important}
+}
