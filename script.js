@@ -36,18 +36,19 @@ $('#search-form').addEventListener('submit',event=>{event.preventDefault();rende
 $('#search-form').addEventListener('change',render);
 $('#search-form input').addEventListener('input',render);
 $('#favorites-filter').addEventListener('click',()=>{onlyFavorites=!onlyFavorites;$('#favorites-filter').setAttribute('aria-pressed',String(onlyFavorites));render()});
-const phone=String(window.MORA_CONFIG?.whatsapp||'').replace(/\D/g,'');
-const configured=/^\d{10,15}$/.test(phone);
-$('#contact-note').textContent=configured?'Ao continuar, a mensagem será aberta no WhatsApp. Nenhum dado é enviado por este site.':'Demonstração: o atendimento ainda não está conectado. Você pode preparar e copiar sua mensagem. Nenhum dado será enviado.';
-$('#contact-submit').textContent=configured?'Continuar no WhatsApp ↗':'Preparar mensagem ↗';
+const contactEmail='cwscaroline@gmail.com';
+$('#contact-note').textContent='Independent portfolio project. Your message will open in your email app; nothing is stored on this website.';
+$('#contact-submit').textContent='Continue by email ↗';
 function contact(property){if($('#property-dialog').open)$('#property-dialog').close();$('#contact-form').reset();$('#contact-status').textContent='';$('#prepared-message').hidden=true;if(property)$('#contact-form textarea[name="message"]').value=(window.MORA_I18N?.getLanguage()==='en'?`I liked the concept of ${property.name} and am looking for a similar property. Could we talk?`:`Gostei da proposta de ${property.name} e procuro um imóvel com características semelhantes. Podemos conversar?`);openDialog($('#contact-dialog'))}
 document.querySelectorAll('[data-contact]').forEach(b=>b.addEventListener('click',()=>contact()));
 $('#request-property').addEventListener('click',()=>contact(selectedProperty));
 $('#contact-form').addEventListener('submit',async event=>{
  event.preventDefault();const data=new FormData(event.target);const intro=window.MORA_I18N?.getLanguage()==='en'?`Hi, I am ${String(data.get('name')).trim()}. I found you on the MORA website.`:`Olá, sou ${String(data.get('name')).trim()}. Vim pelo site da MORA.`;const message=`${intro}\n\n${String(data.get('message')).trim()}`;
- if(configured){window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`,'_blank','noopener,noreferrer');$('#contact-status').textContent='Mensagem preparada. Continue a conversa na janela do WhatsApp.';return}
+ const subject='MORA independent project inquiry';
+ const href='mailto:'+contactEmail+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(message);
  $('#prepared-message').value=message;$('#prepared-message').hidden=false;
- try{await navigator.clipboard.writeText(message);$('#contact-status').textContent='Mensagem copiada! Nenhuma informação foi enviada.'}catch{$('#prepared-message').focus();$('#prepared-message').select();$('#contact-status').textContent='Mensagem pronta. Selecione e copie o texto abaixo.'}
+ $('#contact-status').textContent='Your email application will open with a prepared message. You can also copy the text below.';
+ window.location.href=href;
 });
 $('.menu-toggle').addEventListener('click',()=>{const open=$('.menu-toggle').getAttribute('aria-expanded')!=='true';$('.menu-toggle').setAttribute('aria-expanded',String(open));$('#nav-links').classList.toggle('open',open)});
 document.querySelectorAll('#nav-links a,#nav-links button').forEach(a=>a.addEventListener('click',()=>{$('#nav-links').classList.remove('open');$('.menu-toggle').setAttribute('aria-expanded','false')}));
