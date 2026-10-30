@@ -57,3 +57,33 @@
 }
 @media(max-width:380px){.hero-copy{padding-top:135px}.hero-copy h1{font-size:42px}.hero-bottom{padding:10px 2px}}
 @media(prefers-reduced-motion:reduce){.hero-copy,.hero-photo{transition:none!important}}
+
+/* Reference hero V3: preserve real interactive text, hide any lettering baked into the portfolio reference image. */
+.mora-reference-hero{background:linear-gradient(115deg,#4e95c9 0%,#79add7 50%,#a0c6df 100%);min-height:700px;height:min(860px,95svh);max-height:none}
+.mora-reference-hero .hero-photo{
+  position:absolute;inset:0;width:100%;height:112%;object-fit:cover;object-position:center top;
+  clip-path:inset(0 0 14% 0);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 43%,#000 70%);
+  mask-image:linear-gradient(90deg,transparent 0%,transparent 43%,#000 70%);
+  transform:none!important;
+}
+.mora-reference-hero .hero-shade{background:linear-gradient(90deg,rgba(35,102,161,.5),rgba(59,121,170,.13) 53%,transparent 82%);pointer-events:none}
+.mora-reference-hero .hero-copy{padding-top:clamp(85px,11vh,135px);max-width:1328px;text-align:left}
+.mora-reference-hero .hero-copy h1{font-size:clamp(50px,5.5vw,83px);font-weight:400;line-height:1.06;letter-spacing:-.045em;max-width:660px;margin:14px 0 16px}
+.mora-reference-hero .hero-copy .eyebrow{letter-spacing:.22em;font-size:10px}
+.mora-reference-hero .hero-copy>p:not(.eyebrow){font-size:clamp(12px,1vw,15px);line-height:1.65;max-width:470px}
+.mora-reference-hero .hero-copy .button{margin-top:19px;background:#162431;border:0;min-height:46px}
+.mora-reference-hero .hero-bottom{padding:17px 10px 24px;border-radius:7px 7px 0 0;box-shadow:0 -5px 20px #0c203020}
+.mora-reference-hero .mora-hero-stat strong{font-size:clamp(17px,1.8vw,24px)}
+.mora-reference-hero .mora-stat-disclaimer{position:absolute;bottom:5px;left:0;right:0;text-align:center;font:9px/1.4 Arial,Helvetica,sans-serif;letter-spacing:0;color:#647487}
+@media(max-width:700px){
+ .mora-reference-hero{min-height:700px;height:740px}
+ .mora-reference-hero .hero-photo{height:105%;object-position:72% top;clip-path:inset(0 0 11% 0);-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.15) 23%,#000 82%);mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.15) 23%,#000 82%)}
+ .mora-reference-hero .hero-shade{background:linear-gradient(90deg,#23689dbf,rgba(38,96,139,.48) 84%,rgba(38,96,139,.2))}
+ .mora-reference-hero .hero-copy{padding-top:125px}
+ .mora-reference-hero .hero-copy h1{font-size:clamp(39px,10vw,56px);max-width:11ch}
+ .mora-reference-hero .hero-copy>p:not(.eyebrow){max-width:31ch}
+ .mora-reference-hero .hero-bottom{padding:12px 3px 24px}
+ .mora-reference-hero .mora-hero-stat strong{font-size:16px}
+ .mora-reference-hero .mora-stat-disclaimer{font-size:8px}
+}
